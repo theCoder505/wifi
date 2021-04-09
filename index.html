@@ -2409,7 +2409,7 @@
       z-index: 60 !important;
     }
 
-    .btn-2col {
+    .customBtn {
       width: 7em;
       font-size: 1.5em !important;
       background-color: #3b73ba;
@@ -2507,7 +2507,7 @@
       }
     }
 
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 825px) {
 
       #roundHolder {
         background-color: #555658;
@@ -2517,14 +2517,31 @@
         padding-top: 30px;
         border-radius: 50%;
         position: relative;
-        left: 474px;
+        left: 500px;
         text-align: center;
         z-index: -1;
         top: 30px;
         font-size: 12px;
       }
 
-    }
+      @media screen and (max-width: 900px) {
+
+        #roundHolder {
+          background-color: #555658;
+          color: white;
+          width: 110px;
+          height: 110px;
+          padding-top: 30px;
+          border-radius: 50%;
+          position: relative;
+          left: 474px;
+          text-align: center;
+          z-index: -1;
+          top: 30px;
+          font-size: 12px;
+        }
+
+      }
 
 
     }
@@ -2532,19 +2549,19 @@
     @media screen and (max-width: 680px) {
 
       #roundHolder {
-    background-color: #555658;
-    color: white;
-    width: 110px;
-    height: 110px;
-    padding-top: 30px;
-    border-radius: 50%;
-    position: relative;
-    left: 420px;
-    text-align: center;
-    z-index: -1;
-    top: 30px;
-    font-size: 12px;
-}
+        background-color: #555658;
+        color: white;
+        width: 110px;
+        height: 110px;
+        padding-top: 30px;
+        border-radius: 50%;
+        position: relative;
+        left: 420px;
+        text-align: center;
+        z-index: -1;
+        top: 30px;
+        font-size: 12px;
+      }
 
     }
 
@@ -2810,9 +2827,10 @@
       <div id="divDownUp" style="position: relative; display: inline-block; width: 100%; text-align: center;
        margin-bottom: 40px;">
         <br><br><br><br><br><br>
-        <button id="buttonDesiredDown" class="btn-base btn-2col" onclick="setTemp(-1);"
+        <button id="buttonDesiredDown" class="btn-base btn-2col customBtn" onclick="setTemp(-1);"
           style="z-index: 10;font-size:2em"> Down</button>
-        <button id="buttonDesiredUp" class="btn-base btn-2col" onclick="setTemp(1);" style="font-size:2em"> Up </button>
+        <button id="buttonDesiredUp" class="btn-base btn-2col customBtn" onclick="setTemp(1);" style="font-size:2em"> Up
+        </button>
 
       </div>
     </div>
@@ -5295,7 +5313,7 @@
         {
           width: 120,
           height: 120,
-          fontNumbersSize: lSize,
+          fontNumbersSize: 40,
         }
       );
 
@@ -5303,7 +5321,7 @@
         {
           width: 120,
           height: 120,
-          fontNumbersSize: lSize,
+          fontNumbersSize: 40,
         }
       );
 
@@ -5311,7 +5329,7 @@
         {
           width: 120,
           height: 120,
-          fontNumbersSize: lSize,
+          fontNumbersSize: 35,
         }
       );
 
@@ -5651,10 +5669,12 @@
         colorNumbers: "#fff",
         majorTicks: ["0", "1k", "2k", "3k", "4k", "5k"],
         minorTicks: 5,
-        fontNumbers: "40",
+        fontNumbers: "sans-serif",
+        fontNumbersWeight: "bold",
+        colorNumbers: "#fff",
+        colorMajorTicks: "#dddddd96",
+        colorMinorTicks: "#dddddd96",
         numbersMargin: -25,
-        colorMajorTicks: "#fff",
-        colorMinorTicks: "#fff",
         strokeTicks: false,
         //fontUnitsSize: 200,
         colorPlate: "#232120",
@@ -5770,6 +5790,12 @@
         colorBarProgressEnd: "#a783b5", //Red 1
         colorBar: "#a57db4",
         barWidth: 10,
+        fontNumbers: "sans-serif",
+        fontNumbersWeight: "bold",
+        colorNumbers: "#fff",
+        colorMajorTicks: "#dddddd96",
+        colorMinorTicks: "#dddddd96",
+        numbersMargin: -23,
         highlights: [
           {
             "from": 1000,
@@ -5844,6 +5870,12 @@
         barWidth: 10,
         colorBar: "#7aa2ca",
         colorBarEnd: "#7aa2ca",
+        fontNumbers: "sans-serif",
+        fontNumbersWeight: "bold",
+        colorNumbers: "#fff",
+        colorMajorTicks: "#dddddd96",
+        colorMinorTicks: "#dddddd96",
+        numbersMargin: -25,
         highlights: [
           {
             "from": 1000,
@@ -6975,13 +7007,12 @@
           var f = (Number(e) + Number(json.PumpMin)) * 10;
           json.PumpFixed = parseFloat(Math.trunc(f) / 10).toFixed(1); //This is the Hz calculated from the Desired Temp
         }
-        title = "" + json.TempDesired + degreeSymbol;
+        title = "" + json.PumpFixed + "Hz";
 
-        document.getElementById("currentTmp").innerHTML = "<small>Current</small> <br> <b>" + json.TempCurrent + "°</b>";
-        document.getElementById("roundHolder").innerHTML = "Required <h2>" + title + "</h2>";
+        // document.getElementById("roundHolder").innerHTML = "Required <h2>" + title + "</h2>";
       } else {
         title = " " + cOrF(json.TempDesired, 0, 0) + degreeSymbol;
-        document.getElementById("roundHolder").innerHTML = "Required <h2>" + title + "</h2>";
+        // document.getElementById("roundHolder").innerHTML = "Required <h2>" + title + "</h2>";
         pointerwidth = 0.2;
         switch (json.ThermostatMethod) {
           case 0:
@@ -6996,6 +7027,11 @@
             break;
         }
       }
+
+
+      document.getElementById("roundHolder").innerHTML = "Required <h2>" + title + "</h2>";
+      document.getElementById("currentTmp").innerHTML = "<small>Current</small> <br> <b>" + json.TempCurrent + "°</b>";
+
 
       if (json.CyclicOff > 1) { //if cyclic mode is on we show the cyclic markers
         //    if (json.Thermostat == 0) { //if cyclic on, & not directHz set cyclic on gauge using cyclictemp as reference
