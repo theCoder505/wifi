@@ -219,7 +219,7 @@
     }
 
     div.infront {
-      z-index: 10;
+      z-index: 60;
       display: block;
       position: fixed;
       top: 0;
@@ -468,7 +468,8 @@
     .wrapper>div {
       text-align: center;
     }
-    .wrapper1>div{
+
+    .wrapper1>div {
       text-align: center;
     }
 
@@ -2394,8 +2395,8 @@
       font-size: 1em;
     }
 
-/* -------------------------------------------------------- */
-      /* #pumpgauge {
+    /* -------------------------------------------------------- */
+    /* #pumpgauge {
         margin-left: 160px;
         margin-top: -90px;
     }
@@ -2404,171 +2405,165 @@
         margin-left: 300px;
     } */
 
+    #myLinks {
+      z-index: 60 !important;
+    }
+
     .btn-2col {
-    width: 7em;
-    font-size: 1.5em !important;
-    background-color: #3b73ba;
-    color: white;
-    border-radius: 10px;
-  }
+      width: 7em;
+      font-size: 1.5em !important;
+      background-color: #3b73ba;
+      color: white;
+      border-radius: 10px;
+    }
 
-  .down223{
-transform: rotate(270deg);
-  }
-  .up223{
-    transform: rotate(90deg);
-  }
+    .down223 {
+      transform: rotate(270deg);
+    }
 
-  .temper {
-    padding-top: 140px;
-    position: relative;
-    left: 277px;
-}
-.wrapper1 {
-    margin-top: -68px;
-}
-  #a, #b, #c{
-    display: inline-flex;
-    font-weight: bold;
-    font-size: 12px;
-  }
+    .up223 {
+      transform: rotate(90deg);
+    }
 
-  #roundHolder {
-    background-color: #555658;
-    color: white;
-    width: 100px;
-    height: 100px;
-    padding-top: 30px;
-    border-radius: 50%;
-    position: relative;
-    left: 57%;
-    text-align: center;
-    z-index: -1;
-    top: 22px;
-  }
+    .temper {
+      padding-top: 140px;
+      position: relative;
+      left: 277px;
+    }
 
-  #a {
-    float: left;
-    margin-left: 366px;
-    margin-top: -60px !important;
-    z-index: 5;
-    position: relative;
-}
-#b {
-    top: -48px;
-    position: relative;
-    z-index: 50;
-    left: -318px;
-}
-#c {
-    float: left;
-    position: relative;
-    margin-top: -33px!important;
-    margin-left: -293px;
-    margin-bottom: 62px;
-}
+    .wrapper1 {
+      margin-top: -68px;
+    }
 
-/* ------------------------------------------ */
-/* ------------------------------------------ */
+    #divLinearGauges {
+      display: inline-flex;
+      font-weight: bold;
+      font-size: 12px;
+      justify-content: center;
+      /* border: 5px solid black; */
+    }
+
+    #a {
+      margin-top: -55px !important;
+    }
+
+    #b {
+      margin-top: -58px !important;
+      z-index: 20 !important;
+    }
+
+    #c {
+      margin-top: -30px !important;
+    }
 
 
-@media screen and (max-width: 1080px) {
-  
-  #roundHolder {
-    background-color: #555658;
-    color: white;
-    width: 110px;
-    height: 110px;
-    padding-top: 30px;
-    border-radius: 50%;
-    position: relative;
-    left: 70%;
-    text-align: center;
-    z-index: -1;
-    top: 50px;
-    font-size: 12px;
-}
+    #roundHolder {
+      background-color: #555658;
+      color: white;
+      width: 100px;
+      height: 100px;
+      padding-top: 30px;
+      border-radius: 50%;
+      position: relative;
+      left: 56%;
+      text-align: center;
+      z-index: -1;
+      top: 22px;
+    }
 
-#a {
-    float: left;
-    margin-top: -25px !important;
-    font-size: 10px;
-    margin-left: 10px;
-}
+    #currentTmp {
+      padding: 20px;
+      color: white;
+      width: 90px;
+      margin-top: -120px;
+      position: relative;
+      margin-bottom: 26px;
+      text-align: center;
+      font-size: 12px;
+    }
 
-#c {
-    float: left;
-    position: relative;
-    margin-top: 15px !important;
-    margin-left: -318px;
-}
-#b {
-    float: right;
-    position: relative;
-    margin-top: -220px !important;
-    font-size: 10px;
-    font-weight: bold;
-    z-index: 50;
-    left: 12px;
-}
+    #currentTmp b {
+      font-size: 23px;
+      font-weight: bold;
+    }
 
-}
+    /* ------------------------------------------ */
+    /* ------------------------------------------ */
 
-@media screen and (max-width: 600px){
+    @media screen and (max-width: 1080px) {
+      #roundHolder {
+        background-color: #555658;
+        color: white;
+        width: 110px;
+        height: 110px;
+        padding-top: 30px;
+        border-radius: 50%;
+        position: relative;
+        left: 596px;
+        text-align: center;
+        z-index: -1;
+        top: 30px;
+        font-size: 12px;
+      }
+    }
 
-  #c {
-    float: left;
-    margin-top: -85px !important;
-    z-index: 20;
-    position: relative;
-    margin-left: 21%;
-    font-size: 6px;
-}
-#a {
-    float: left;
-    position: relative;
-    z-index: 20;
-    margin-top: -8px !important;
-    margin-left: -15px;
-    font-size: 6px;
-}
-#b {
-    float: right;
-    margin-top: -150px !important;
-    margin-left: -6%;
-    margin-right: -10px;
-    position: relative;
-    z-index: 50;
-}
-#roundHolder {
-    background-color: #555658;
-    color: white;
-    width: 75px;
-    height: 75px;
-    padding-top: 22px;
-    border-radius: 50%;
-    position: relative;
-    left: 70%;
-    text-align: center;
-    z-index: -1;
-    top: 5px;
-    font-size: 8px;
-}
+    @media screen and (max-width: 900px) {
 
-}
+      #roundHolder {
+        background-color: #555658;
+        color: white;
+        width: 110px;
+        height: 110px;
+        padding-top: 30px;
+        border-radius: 50%;
+        position: relative;
+        left: 474px;
+        text-align: center;
+        z-index: -1;
+        top: 30px;
+        font-size: 12px;
+      }
 
-@media screen and (max-width: 360px){
-  #b {
-    float: right;
-    margin-top: -135px !important;
-    margin-left: -6%;
-    margin-right: -10px;
-    position: relative;
-    z-index: 50;
-}
-}
+    }
+
+    @media screen and (max-width: 550px) {
+
+      #roundHolder {
+        background-color: #555658;
+        color: white;
+        width: 75px;
+        height: 75px;
+        padding-top: 22px;
+        border-radius: 50%;
+        position: relative;
+        left: 66%;
+        text-align: center;
+        z-index: -1;
+        top: 5px;
+        font-size: 8px;
+      }
+
+    }
 
 
+    @media screen and (max-width: 450px) {
+
+      #roundHolder {
+        background-color: #555658;
+        color: white;
+        width: 75px;
+        height: 75px;
+        padding-top: 22px;
+        border-radius: 50%;
+        position: relative;
+        left: 74%;
+        text-align: center;
+        z-index: -1;
+        top: 5px;
+        font-size: 8px;
+      }
+
+    }
   </style>
 
 </head>
@@ -2753,41 +2748,49 @@ transform: rotate(270deg);
 
 
     <!-- HOME -->
-    
+
     <div id="HomePage" style="display: grid;">
-      <div id="roundHolder"> <small>Required</small><br> <h2>27°C</h2></div>
+      <div id="roundHolder"> <small>Required</small><br>
+        <h2>27°C</h2>
+      </div>
       <div class="wrapper1">
         <div id="divTemperatureGauge">
           <canvas id="temperaturegauge" onclick="clickTempGauge()"></canvas>
+          <center>
+            <div id="currentTmp"> <small>Current</small> <br> <b>0°</b> </div>
+          </center>
         </div>
-        <div id="divLinearGauges">
-          
-          <div class="wrapper22" id="a">
-            <div class="rightcolumnbox"><canvas id="rpmgauge"></canvas>
-              <div id="textRpmGauge" style="font-size:12px; color: blue;">Fan 0RPM.</div>
-            </div>
-          </div>
-          
-          <div class="wrapper22" id="c">
+        <center>
+          <div id="divLinearGauges">
 
-            <div class="rightcolumnbox smallbottompad"><canvas id="bodytempgauge"></canvas>
-              <div id="textTempBodyGauge" style="font-size:12px; color: blue;">Body 23°C...</div>
+            <div class="wrapper22" id="a">
+              <div class="rightcolumnbox"><canvas id="rpmgauge"></canvas>
+                <div id="textRpmGauge" style="font-size:12px; color: blue;">Fan 0RPM.</div>
+              </div>
             </div>
-          </div>
-          <div class="wrapper22" id="b" onclick="clickFuelText()" >
-            <div class="rightcolumnbox"><canvas id="pumpgauge"></canvas>
-              <div id="textPumpGauge" style="font-size:12px; color: blue;">  Pump 0.0 Hz...</div>
-              <div id="textPumpGauge2" style="font-size:8px; color: blue;">  Fuel Rate 0ml/hr...</div>
+
+            <div class="wrapper22" id="c">
+
+              <div class="rightcolumnbox smallbottompad"><canvas id="bodytempgauge"></canvas>
+                <div id="textTempBodyGauge" style="font-size:12px; color: blue;">Body 23°C...</div>
+              </div>
             </div>
+            <div class="wrapper22" id="b" onclick="clickFuelText()">
+              <div class="rightcolumnbox"><canvas id="pumpgauge"></canvas>
+                <div id="textPumpGauge" style="font-size:12px; color: blue;"> Pump 0.0 Hz...</div>
+                <div id="textPumpGauge2" style="font-size:8px; color: blue;"> Fuel Rate 0ml/hr...</div>
+              </div>
+            </div>
+
           </div>
-        
-        </div>
+        </center>
       </div>
-      <div id="divDownUp" style="position: relative; display: inline-block; width: 100%; text-align: center; margin-bottom: 40px;">
-        <br><br>
+      <div id="divDownUp" style="position: relative; display: inline-block; width: 100%; text-align: center;
+       margin-bottom: 40px;">
+        <br><br><br><br><br><br>
         <button id="buttonDesiredDown" class="btn-base btn-2col" onclick="setTemp(-1);"
-          style="z-index: 10;font-size:2em">  Down</button>
-        <button id="buttonDesiredUp" class="btn-base btn-2col" onclick="setTemp(1);" style="font-size:2em">  Up </button>
+          style="z-index: 10;font-size:2em"> Down</button>
+        <button id="buttonDesiredUp" class="btn-base btn-2col" onclick="setTemp(1);" style="font-size:2em"> Up </button>
 
       </div>
     </div>
@@ -5195,6 +5198,7 @@ transform: rotate(270deg);
       //const gridContainer = document.querySelector('.wrapper');
       if (aspect > 1) {
         gwidth = Wwidth * 0.25;
+        gwidth2 = 341;
         bwidth = Wwidth * 0.3;
         gheight = 40 + Wwidth / 2 * 0.12;
 
@@ -5209,6 +5213,7 @@ transform: rotate(270deg);
 
       } else { // portrait
         gwidth = Wwidth * 0.7;
+        gwidth2 = 216;
         bwidth = Wwidth * 0.6;
         gheight = 40 + Wwidth / 2 * 0.3;
         _("divDownUp").style.marginTop = "0em";
@@ -5259,31 +5264,31 @@ transform: rotate(270deg);
 
       temperaturegauge.update(
         {
-          width: gwidth,
-          height: gwidth,
+          width: 300,
+          height: 300,
         }
       );
 
       rpmgauge.update(
         {
-          width: bwidth,
-          height: gheight,
+          width: 120,
+          height: 120,
           fontNumbersSize: lSize,
         }
       );
 
       pumpgauge.update(
         {
-          width: bwidth,
-          height: gheight,
+          width: 120,
+          height: 120,
           fontNumbersSize: lSize,
         }
       );
 
       bodytempgauge.update(
         {
-          width: bwidth,
-          height: gheight,
+          width: 120,
+          height: 120,
           fontNumbersSize: lSize,
         }
       );
@@ -5548,12 +5553,12 @@ transform: rotate(270deg);
         // numbersMargin: "-15",
         fontNumbersWeight: "bold",
         highlights: [
-      {
-        "from": 0,
-        "to": 5000,
-        "color": "rgba(255,255,255,0)"
-      }
-    ], //transparent
+          {
+            "from": 0,
+            "to": 5000,
+            "color": "rgba(255,255,255,0)"
+          }
+        ], //transparent
         width: 400,
         height: 400,
         barWidth: 5,
@@ -5567,10 +5572,10 @@ transform: rotate(270deg);
         fontTitleSize: 18,
         fontUnitsSize: 15,
         fontUnitsWeight: "bold",
-        units: "Current",
+        // units: "Current",
         colorUnits: "white",
-        valueBox: true,
-        colorValueBoxBackground: "",
+        valueBox: false,
+        colorValueBoxBackground: "#ddd",
         valueBoxStroke: 0,
         valueBoxBorderRadius: 0,
         // value: "deg",
@@ -5607,80 +5612,80 @@ transform: rotate(270deg);
         needleEnd: 60,
       }).draw();
 
-   
-var rpmgauge = new RadialGauge(
-  {
-    renderTo: 'rpmgauge',
-    minValue: 0,
-    maxValue: 5000,
-    value: 0,
-    valueBox: false,
-    width: 375, //590
-    height: 100,
-    //title: "Heater Demand --%",
-    //fontTitleSize: 80,
-    // fontNumbersSize: 40,
-    colorTitle: "#fff",
-    colorNumbers: "#fff",
-    majorTicks: ["0", "1k", "2k", "3k", "4k", "5k"],
-    minorTicks: 5,
-    fontNumbers: "40",
-    numbersMargin: -25,
-    colorMajorTicks: "#fff",
-    colorMinorTicks: "#fff",
-    strokeTicks: false,
-    //fontUnitsSize: 200,
-    colorPlate: "#232120",
-    colorPlateEnd: "#5f5d5c",
-    //borderShadowWidth: 0,
-    borders: true,
-    borderOuterWidth: "3",
-    colorBorderOuter: "#62605f",
-    colorBorderOuterEnd: "#62605f",
-    borderMiddleWidth: "5",
-    colorBorderInner: "#000",
-    colorBorderInnerEnd: "#000",
-    colorBorderMiddle: "#62605f",
-    colorBorderMiddleEnd: "#62605f",
-    barBeginCircle: false,
-    colorBar: "#76c15a",
-    tickSide: "left",
-    ticksAngle: 300,
-    startAngle: 29,
-    numberSide: "left",
-    needle: true,
-    // needleType: "line",
-    colorNeedle: "#65bc4b",
-    colorNeedleEnd: "#65bc4b",
-    colorNeedleShadowUp: "#65bc4b",
-    colorNeedleShadowDown: "#65bc4b",
-    needleCircleSize: "18",
-    colorNeedleCircleInner: "#080604",
-    colorNeedleCircleInnerEnd: "#747372",
-    colorNeedleCircleOuter: "#080604",
-    colorNeedleCircleInnerEnd: "#747372",
-    needleShadow: false,
-    needleStart: 0,
-    needleEnd: 60,
-    needleWidth: 9,
-    animation: false,
-    //colorNeedleEnd: "#F80",
-    //animationDuration: 1000,
-    //animationRule: "linear",
-    //animationTarget: "plate",
-    ticksWidth: 10,
-    ticksWidthMinor: 5,
-    colorBarProgress: "rgba(255,165,0,1)", //Orange 1
-    colorBarProgressEnd: "rgba(255,0,0,1)", //Red 1
-    barWidth: 10,
-    highlights: [
+
+    var rpmgauge = new RadialGauge(
       {
-        "from": 0,
-        "to": 5000,
-        "color": "rgba(255,255,255,0)"
-      }
-    ], //transparent
-  } ).draw();
+        renderTo: 'rpmgauge',
+        minValue: 0,
+        maxValue: 5000,
+        value: 0,
+        valueBox: false,
+        width: 375, //590
+        height: 100,
+        //title: "Heater Demand --%",
+        //fontTitleSize: 80,
+        // fontNumbersSize: 40,
+        colorTitle: "#fff",
+        colorNumbers: "#fff",
+        majorTicks: ["0", "1k", "2k", "3k", "4k", "5k"],
+        minorTicks: 5,
+        fontNumbers: "40",
+        numbersMargin: -25,
+        colorMajorTicks: "#fff",
+        colorMinorTicks: "#fff",
+        strokeTicks: false,
+        //fontUnitsSize: 200,
+        colorPlate: "#232120",
+        colorPlateEnd: "#5f5d5c",
+        //borderShadowWidth: 0,
+        borders: true,
+        borderOuterWidth: "3",
+        colorBorderOuter: "#62605f",
+        colorBorderOuterEnd: "#62605f",
+        borderMiddleWidth: "5",
+        colorBorderInner: "#000",
+        colorBorderInnerEnd: "#000",
+        colorBorderMiddle: "#62605f",
+        colorBorderMiddleEnd: "#62605f",
+        barBeginCircle: false,
+        colorBar: "#76c15a",
+        tickSide: "left",
+        ticksAngle: 300,
+        startAngle: 29,
+        numberSide: "left",
+        needle: true,
+        // needleType: "line",
+        colorNeedle: "#65bc4b",
+        colorNeedleEnd: "#65bc4b",
+        colorNeedleShadowUp: "#65bc4b",
+        colorNeedleShadowDown: "#65bc4b",
+        needleCircleSize: "18",
+        colorNeedleCircleInner: "#080604",
+        colorNeedleCircleInnerEnd: "#747372",
+        colorNeedleCircleOuter: "#080604",
+        colorNeedleCircleInnerEnd: "#747372",
+        needleShadow: false,
+        needleStart: 0,
+        needleEnd: 60,
+        needleWidth: 9,
+        animation: false,
+        //colorNeedleEnd: "#F80",
+        //animationDuration: 1000,
+        //animationRule: "linear",
+        //animationTarget: "plate",
+        ticksWidth: 10,
+        ticksWidthMinor: 5,
+        colorBarProgress: "rgba(255,165,0,1)", //Orange 1
+        colorBarProgressEnd: "rgba(255,0,0,1)", //Red 1
+        barWidth: 10,
+        highlights: [
+          {
+            "from": 0,
+            "to": 5000,
+            "color": "rgba(255,255,255,0)"
+          }
+        ], //transparent
+      }).draw();
 
 
     var pumpgauge = new RadialGauge(
@@ -5700,7 +5705,7 @@ var rpmgauge = new RadialGauge(
         minorTicks: 5,
         strokeTicks: false,
         //fontUnitsSize: 200,
-        colorPlate: "#555353", 
+        colorPlate: "#555353",
         colorPlateEnd: "#393837",
         //borderShadowWidth: 0,
         borders: true,
@@ -5773,7 +5778,7 @@ var rpmgauge = new RadialGauge(
         colorMinorTicks: "#fff",
         strokeTicks: false,
         //fontUnitsSize: 200,
-        colorPlate: "#555353", 
+        colorPlate: "#555353",
         colorPlateEnd: "#393837",
         //borderShadowWidth: 0,
         borders: true,
@@ -6883,6 +6888,7 @@ var rpmgauge = new RadialGauge(
           },
           buttonDelay);
       }
+
     }
 
 
@@ -6948,9 +6954,12 @@ var rpmgauge = new RadialGauge(
           json.PumpFixed = parseFloat(Math.trunc(f) / 10).toFixed(1); //This is the Hz calculated from the Desired Temp
         }
         title = "" + json.TempDesired + degreeSymbol;
-        document.getElementById("roundHolder").innerHTML="Required <h2>"+title+"</h2>";
+
+        document.getElementById("currentTmp").innerHTML = "<small>Current</small> <br> <b>" + json.TempCurrent + "°</b>";
+        document.getElementById("roundHolder").innerHTML = "Required <h2>" + title + "</h2>";
       } else {
-        title = "Desired " + cOrF(json.TempDesired, 0, 0) + degreeSymbol;
+        title = " " + cOrF(json.TempDesired, 0, 0) + degreeSymbol;
+        document.getElementById("roundHolder").innerHTML = "Required <h2>" + title + "</h2>";
         pointerwidth = 0.2;
         switch (json.ThermostatMethod) {
           case 0:
@@ -7118,7 +7127,7 @@ var rpmgauge = new RadialGauge(
         }
       );
     }
-    
+
     function verboseThermostatMethod() {
       switch (json.ThermostatMethod) {
         case 0:
