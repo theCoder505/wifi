@@ -2471,7 +2471,7 @@
       font-size: 30px;
       font-weight: bold;
       font-family: sans-serif;
-      margin-left: -3px;
+      margin-left: 3px;
     }
 
 
@@ -5268,7 +5268,7 @@
       var gwidth = 100;
       var gheight = 100;
       var bwidth = 0;
-
+      
       Wwidth = window.innerWidth;
       Wheight = window.innerHeight;
       console.log("screen=" + Wwidth + "," + Wheight);
@@ -7140,6 +7140,10 @@
       document.getElementById("roundHolder").innerHTML = "Required <h2>" + title + "</h2>";
       document.getElementById("currentTmp").innerHTML = "<small>Current</small> <br> <b>" + cOrF(json.TempCurrent, 1, 0) + "°</b>";
 
+      var forPcAspect = (window.innerWidth)/(window.innerHeight);
+      if(forPcAspect > 1){
+        document.querySelector("#currentTmp b").style.marginLeft = "-3px";
+      }
 
       if (json.CyclicOff > 1) { //if cyclic mode is on we show the cyclic markers
         //    if (json.Thermostat == 0) { //if cyclic on, & not directHz set cyclic on gauge using cyclictemp as reference
