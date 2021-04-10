@@ -2456,6 +2456,25 @@
       margin-top: -15px !important;
     }
 
+    #currentTmp {
+      padding: 20px;
+      color: white;
+      width: 90px;
+      margin-top: -138px;
+      position: relative;
+      margin-bottom: 26px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    #currentTmp b {
+      font-size: 30px;
+      font-weight: bold;
+      font-family: sans-serif;
+      margin-left: -4px;
+    }
+
+
 
     #roundHolder {
       background-color: #555658;
@@ -2465,30 +2484,30 @@
       padding-top: 30px;
       border-radius: 50%;
       position: relative;
-      left: 56%;
+      left: 780px;
       text-align: center;
       z-index: -1;
       top: 22px;
     }
 
-    #currentTmp {
-      padding: 20px;
-      color: white;
-      width: 90px;
-      margin-top: -120px;
-      position: relative;
-      margin-bottom: 26px;
-      text-align: center;
-      font-size: 12px;
-    }
-
-    #currentTmp b {
-      font-size: 23px;
-      font-weight: bold;
-    }
-
     /* ------------------------------------------ */
     /* ------------------------------------------ */
+
+    @media screen and (max-width: 1280px) {
+      #roundHolder {
+        background-color: #555658;
+        color: white;
+        width: 100px;
+        height: 100px;
+        padding-top: 30px;
+        border-radius: 50%;
+        position: relative;
+        left: 745px;
+        text-align: center;
+        z-index: -1;
+        top: 22px;
+      }
+    }
 
     @media screen and (max-width: 1080px) {
       #roundHolder {
@@ -2499,7 +2518,7 @@
         padding-top: 30px;
         border-radius: 50%;
         position: relative;
-        left: 596px;
+        left: 625px;
         text-align: center;
         z-index: -1;
         top: 30px;
@@ -2534,12 +2553,32 @@
           padding-top: 30px;
           border-radius: 50%;
           position: relative;
-          left: 474px;
+          left: 485px;
           text-align: center;
           z-index: -1;
           top: 30px;
           font-size: 12px;
         }
+
+
+        #currentTmp {
+          padding: 20px;
+          color: white;
+          width: 90px;
+          margin-top: -120px;
+          position: relative;
+          margin-bottom: 26px;
+          text-align: center;
+          font-size: 12px;
+        }
+
+        #currentTmp b {
+          font-size: 25px !important;
+          font-weight: bold;
+          font-family: sans-serif;
+          margin-left: 0px;
+        }
+
 
       }
 
@@ -5302,36 +5341,105 @@
       document.body.style.fontSize = fSize + "%";
       _("text").innerHTML = "gwidth: " + parseFloat(gwidth).toFixed(0) + " Width: " + Wwidth + " Height: " + Wheight + " Aspect: " + parseFloat(Wwidth / Wheight).toFixed(2);
 
-      temperaturegauge.update(
-        {
-          width: 300,
-          height: 300,
-        }
-      );
+      if (aspect > 1) {
+        temperaturegauge.update(
+          {
+            width: 400,
+            height: 400,
+          }
+        );
 
-      rpmgauge.update(
-        {
-          width: 120,
-          height: 120,
-          fontNumbersSize: 40,
-        }
-      );
+        rpmgauge.update(
+          {
+            width: 140,
+            height: 140,
+            fontNumbersSize: 40,
+          }
+        );
 
-      pumpgauge.update(
-        {
-          width: 120,
-          height: 120,
-          fontNumbersSize: 40,
-        }
-      );
+        pumpgauge.update(
+          {
+            width: 140,
+            height: 140,
+            fontNumbersSize: 40,
+          }
+        );
 
-      bodytempgauge.update(
-        {
-          width: 120,
-          height: 120,
-          fontNumbersSize: 35,
-        }
-      );
+        bodytempgauge.update(
+          {
+            width: 140,
+            height: 140,
+            fontNumbersSize: 35,
+          }
+        );
+
+      }
+      else {
+        temperaturegauge.update(
+          {
+            width: 300,
+            height: 300,
+          }
+        );
+
+        rpmgauge.update(
+          {
+            width: 120,
+            height: 120,
+            fontNumbersSize: 40,
+          }
+        );
+
+        pumpgauge.update(
+          {
+            width: 120,
+            height: 120,
+            fontNumbersSize: 40,
+          }
+        );
+
+        bodytempgauge.update(
+          {
+            width: 120,
+            height: 120,
+            fontNumbersSize: 35,
+          }
+        );
+
+      }
+
+
+
+      // temperaturegauge.update(
+      //   {
+      //     width: 300,
+      //     height: 300,
+      //   }
+      // );
+
+      // rpmgauge.update(
+      //   {
+      //     width: 120,
+      //     height: 120,
+      //     fontNumbersSize: 40,
+      //   }
+      // );
+
+      // pumpgauge.update(
+      //   {
+      //     width: 120,
+      //     height: 120,
+      //     fontNumbersSize: 40,
+      //   }
+      // );
+
+      // bodytempgauge.update(
+      //   {
+      //     width: 120,
+      //     height: 120,
+      //     fontNumbersSize: 35,
+      //   }
+      // );
 
     }
 
@@ -7030,7 +7138,7 @@
 
 
       document.getElementById("roundHolder").innerHTML = "Required <h2>" + title + "</h2>";
-      document.getElementById("currentTmp").innerHTML = "<small>Current</small> <br> <b>" + json.TempCurrent + "°</b>";
+      document.getElementById("currentTmp").innerHTML = "<small>Current</small> <br> <b>" + cOrF(json.TempCurrent, 1, 0) + "°</b>";
 
 
       if (json.CyclicOff > 1) { //if cyclic mode is on we show the cyclic markers
